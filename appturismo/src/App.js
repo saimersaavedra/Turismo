@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import turista from './componentes/turista/turista';
+import Turista from './componentes/turista/Turista';
+import React from 'react';
 function App() {
   return (
     <div className="App">
-      <turista/>
+      <Turista/>
     </div>
   );
 }

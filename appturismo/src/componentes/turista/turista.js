@@ -1,11 +1,13 @@
 import React from 'react';
-import tabla from './tabla';
-const turista = () => {
+import TablaTuristas from './TablaTuristas';
+
+
+const Turista = () => {
     return (
         <div>
-            <tabla/>
+            <TablaTuristas/>
         </div>
     );
 };
 
-export default turista;
+export default Turista;
