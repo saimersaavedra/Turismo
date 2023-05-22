@@ -26,7 +26,7 @@ public class TuristaResource {
         turistas = turistaDao.consultar();
         return Response
                 .status(200)
-                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Origin", "GET")
                 .entity(turistas)
                 .build();
     }
