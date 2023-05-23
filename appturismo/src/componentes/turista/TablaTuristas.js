@@ -1,30 +1,40 @@
 import React from 'react';
 import FilaTurista from './FilaTurista';
 
-
 const TablaTuristas = ({data}) => {
     return (
         <div>
-            <div class="text-bg-primary p-3">
-            <h3>LISTA DE TURISTAS</h3>
-            </div> 
-            <table>
+            <div class="text-bg-primary p-3"><h3>LISTA DE TURISTAS</h3></div>
+            <table class="table table-striped-columns">
                 <thead>
-                    <th>CC</th>
+                    <th>Nit</th>
                     <th>Nombre</th>
-                    <th>Apedo</th>
-                    <th>Telefono</th>
+                    <th>Descripción</th>
                     <th>Dirección</th>
-                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
                 </thead>
                 <tbody>
-             { data.length > 0 ? ( data.map((tie) => ( 
-             <FilaTurista key ={tie.id} tie = {tie}              
-             />   ))  ) : 
-             ( <tr> <td colSpan="6">Sin Datos</td> </tr> ) }    
-                </tbody>
+                    {
+                    data.length > 0 ? (
+                        data.map((tie) => (
+                            <FilaTurista
+                            key ={tie.id}
+                            tie = {tie}             
+                                                     />
 
-            </table>            
+
+                        ))
+
+                    ) : (
+                        <tr>
+                            <td colSpan="6">Sin Datos</td>
+                        </tr>
+                    )
+                }   
+                </tbody>
+            </table>
+            
         </div>
     );
 };

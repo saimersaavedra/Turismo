@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import TablaTuristas from './TablaTuristas';
+import TablaTurista from './TablaTuristas';
 import axios from 'axios';
+import CardTurista from './CardTurista';
 
 const Turista = () => {
     const [list, setList] = useState([]);
     useEffect(() => {
-
-        const fetchData = async() => {
-          
-                const response = await axios({
-                    url: "http://localhost:8080/TURISMO_1152280_POO2/api/apiturista/turista"
+        const fetchData = async () => {
+            try{
+                const response = await axios ({
+                    url: "http://localhost:8080/TURISMO_1152280_POO2/api/apiturista/turista",
                 });
                 setList(response.data);
-            
+            } catch(error){
+                console.log(error);
+            }
         };
         fetchData();
-    },[setList] );
+
+    }, [setList] );
     return (
         <div>
-            <TablaTuristas/>
+            <TablaTurista data = {list} /> 
+            <CardTurista data = {list} />             
         </div>
     );
 };
+
 export default Turista;
 
