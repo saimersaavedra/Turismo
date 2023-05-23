@@ -1,14 +1,14 @@
 import React from 'react';
 
-const FilaTurista = () => {
+const FilaTurista = ({tie}) => {
     return (
         <tr>
-                        <td>654789</td>
-                        <td>Ximena</td>
-                        <td>Contreras</td>
-                        <td>321456987</td>
-                        <td>Av</td>
-                        <td>xc@gmail.com</td>
+                        <td>{tie.id}</td>
+                        <td>{tie.nombre}</td>
+                        <td>{tie.apellido}</td>
+                        <td>{tie.numero}</td>
+                        <td>{tie.direccion}</td>
+                        <td>{tie.correo}</td>
                         <td>
                             <button>Editar</button>
                             <button>Eliminar</button>

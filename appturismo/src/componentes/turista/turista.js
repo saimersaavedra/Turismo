@@ -9,7 +9,7 @@ const Turista = () => {
         const fetchData = async () => {
             try{
                 const response = await axios ({
-                    url: "http://localhost:8080/TURISMO_1152280_POO2/api/apiturista/turista",
+                    url: "http://localhost:8080/Turismo/api/apiturista/turista",
                 });
                 setList(response.data);
             } catch(error){
