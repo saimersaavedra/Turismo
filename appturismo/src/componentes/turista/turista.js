@@ -7,15 +7,12 @@ const Turista = () => {
     useEffect(() => {
 
         const fetchData = async() => {
-            try{
+          
                 const response = await axios({
                     url: "http://localhost:8080/TURISMO_1152280_POO2/api/apiturista/turista"
                 });
                 setList(response.data);
-            } 
-            catch(error){
-                console.log(error);
-            }
+            
         };
         fetchData();
     },[setList] );
