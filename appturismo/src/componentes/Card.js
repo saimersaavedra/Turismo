@@ -6,8 +6,8 @@ const Card = ({tie}) => {
     <div class="card">
       
       <div class="card-body">
-        <h5 class="card-title">{tie.name}</h5>
-        <p class="card-text">{tie.gmail}</p>
+        <h5 class="card-title">{tie.nombre}</h5>
+        <p class="card-text">{tie.apellido}</p>
         <button class="btn btn-primary">Editar</button>
         <button class="btn btn-secondary">Eliminar</button>
       </div>

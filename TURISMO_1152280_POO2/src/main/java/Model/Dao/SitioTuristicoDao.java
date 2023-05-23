@@ -20,7 +20,7 @@ import red.BaseDatos;
  * @author Estudiante
  */
 public class SitioTuristicoDao implements ISitioTuristico {
-    String SQL_CONSULTAR = "SELECT * FROM sitio_turistico";
+    final static String SQL_CONSULTAR = "SELECT * FROM sitio_turistico";
     //int id, String name, String photo, int price, int calification, String description
     final static String SQL_INSERTAR = "INSERT INTO sitio_turistico(id,name,photo,price, calification, description ) VALUES(?,?,?,?,?,?)";
     final static String SQL_BORRAR = "DELETE FROM sitio_turistico WHERE id = ?";

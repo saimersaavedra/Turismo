@@ -1,7 +1,7 @@
 import React from 'react';
-import FilaTurista from './FilaTurista';
+import FilaTabla from './FilaTabla';
 
-const TablaTuristas = ({data}) => {
+const TablaTurista = ({data}) => {
     return (
         <div>
             <div class="text-bg-primary p-3"><h3>LISTA DE TURISTAS</h3></div>
@@ -10,8 +10,6 @@ const TablaTuristas = ({data}) => {
                     <th>Nit</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
                     <th>Dirección</th>
                     <th>Telefono</th>
                     <th>Acciones</th>
@@ -20,7 +18,7 @@ const TablaTuristas = ({data}) => {
                     {
                     data.length > 0 ? (
                         data.map((tie) => (
-                            <FilaTurista
+                            <FilaTabla
                             key ={tie.id}
                             tie = {tie}             
                                                      />
@@ -41,5 +39,4 @@ const TablaTuristas = ({data}) => {
     );
 };
 
-export default TablaTuristas;
-
+export default TablaTurista;
