@@ -9,9 +9,7 @@ const Turista = () => {
         const fetchData = async() => {
             try{
                 const response = await axios({
-
                     url: "http://localhost:8080/TURISMO_1152280_POO2/api/apiturista/turista"
-                
                 });
                 setList(response.data);
             } 
@@ -20,7 +18,7 @@ const Turista = () => {
             }
         };
         fetchData();
-    });
+    },[setList] );
     return (
         <div>
             <TablaTuristas/>
@@ -28,3 +26,4 @@ const Turista = () => {
     );
 };
 export default Turista;
+
