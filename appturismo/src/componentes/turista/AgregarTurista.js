@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 const AgregarTurista = ({ createTurista}) => {
-  const [newTurista, setNewTurista] = useState({ id: '', nombre: '', apellido: '', telefono: '', correo: '', direccion: '' });
+  const [newTurista, setNewTurista] = useState({ id: '', name: '', apellido: '', telefono: '', gmail: '', direction: '' });
 
   const handleInputChange = (e) => {
     setNewTurista({ ...newTurista, [e.target.name]: e.target.value });
@@ -11,7 +11,7 @@ const AgregarTurista = ({ createTurista}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     createTurista(newTurista);
-    setNewTurista({ id: '', nombre: '', apellido: '', telefono: '', correo: '', direccion: ''});
+    setNewTurista({ id: '', name: '', apellido: '', telefono: '', gmail: '', direction: ''});
   };
 
   return (
@@ -25,7 +25,7 @@ const AgregarTurista = ({ createTurista}) => {
       />
       <input
         type="text"
-        name="nombre"
+        name="name"
         value={newTurista.nombre}
         onChange={handleInputChange}
         placeholder="Nombre"
@@ -35,28 +35,28 @@ const AgregarTurista = ({ createTurista}) => {
         name="apellido"
         value={newTurista.apellido}
         onChange={handleInputChange}
-        placeholder="Nombre"
+        placeholder="Apellido"
       />
       <input
         type="text"
         name="telefono"
         value={newTurista.telefono}
         onChange={handleInputChange}
-        placeholder="Nombre"
+        placeholder="Telefono"
       />
       <input
         type="text"
-        name="correo"
+        name="gmail"
         value={newTurista.correo}
         onChange={handleInputChange}
-        placeholder="Nombre"
+        placeholder="Gmail"
       />
       <input
         type="text"
-        name="direccion"
+        name="direction"
         value={newTurista.direccion}
         onChange={handleInputChange}
-        placeholder="Nombre"
+        placeholder="Direccion"
       />
       <button type="submit">Agregar</button>
     </form>

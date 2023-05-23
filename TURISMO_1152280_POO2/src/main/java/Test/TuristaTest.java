@@ -34,10 +34,9 @@ public class TuristaTest {
         //BORRAR
        System.out.println("Borrado: "+turistaDao.borrar(dos));
        */
-        Turista t = new Turista("1");
-        Turista g = new Turista("1","Andres", "Parada", "314555284","andres@ufps.com","Av 89 #2");
-        turistaDao.actualizar(g);
-        System.out.println(turistaDao.consultarId(t));
+        Turista g = new Turista("3","Keyly", "Ovallos", "31421355284","keyly@ufps.com","Av 2 #2");
+        turistaDao.Insertar(g);
+     
         
     }
 }
