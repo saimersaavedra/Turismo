@@ -12,7 +12,7 @@ const TablaTuristas = ({data}) => {
                 <thead>
                     <th>CC</th>
                     <th>Nombre</th>
-                    <th>Apedo</th>
+                    <th>Apellido</th>
                     <th>Telefono</th>
                     <th>Dirección</th>
                     <th>Correo</th>
