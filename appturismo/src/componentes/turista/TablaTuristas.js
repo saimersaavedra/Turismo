@@ -10,6 +10,8 @@ const TablaTuristas = ({data}) => {
                     <th>Nit</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
                     <th>Dirección</th>
                     <th>Telefono</th>
                     <th>Acciones</th>
