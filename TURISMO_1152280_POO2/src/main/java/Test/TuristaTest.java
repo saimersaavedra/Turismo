@@ -17,14 +17,14 @@ public class TuristaTest {
     public static void main(String[] args) {
         TuristaDao turistaDao = new TuristaDao();
         /*
-        List<Turista> turistas = new ArrayList();
+       
         
         INSERTAR
        // Turista uno = new Turista("1","Andres","Parada","311521234132","andres@ufps.com","Av 11 #3");
         Turista dos = new Turista("2","Steven","Baron","31434132","steven@ufps.com","Av 1 #4");
 
         System.out.println("resultado: "+turistaDao.Insertar(uno)/*+turistaDao.Insertar(dos));
-        
+        List<Turista> turistas = new ArrayList();
         CONSULTAR
         turistas = turistaDao.consultar();
         for (Turista turista : turistas) {
