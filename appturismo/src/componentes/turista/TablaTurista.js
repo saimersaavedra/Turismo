@@ -26,7 +26,7 @@ const TablaTurista = ({data}) => {
 
                     ) : (
                         <tr>
-                            <td colSpan="6">Sin Datos</td>
+                            <td colSpan="6"><img alt = 'cargando' src = 'https://cdn.dribbble.com/users/4011649/screenshots/9633550/media/910c31b314bcaf943a4055253c6c25ec.gif'/></td>
                         </tr>
                     )
                 }   
