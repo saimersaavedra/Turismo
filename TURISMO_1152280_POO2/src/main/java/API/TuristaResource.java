@@ -26,7 +26,6 @@ public class TuristaResource {
         turistas = turistaDao.consultar();
         return Response
                 .status(200)
-                .header("Access-Control-Allow-Origin", "*")
                 .entity(turistas)
                 .build();
     }
@@ -38,7 +37,6 @@ public class TuristaResource {
         Turista turista = new Turista(id);
         return Response
                 .status(200)
-                .header("Access-Control-Allow-Origin", "*")
                 .entity(turistaDao.consultarId(turista))
                 .build();
     }
@@ -67,7 +65,6 @@ public class TuristaResource {
         if (i == 0) {
             return Response
                     .status(Response.Status.BAD_REQUEST)
-                    .header("Access-Control-Allow-Origin", "*")
                     .entity("Turista not found")
                     .build();
         } else {

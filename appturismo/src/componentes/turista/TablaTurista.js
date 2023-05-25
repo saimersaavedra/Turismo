@@ -13,6 +13,7 @@ const TablaTurista = ({data}) => {
                     <th>gmail</th>
                     <th>telefono</th>
                     <th>dirección</th>
+                    <th>acciones</th>
                 </thead>
                 <tbody>
                     {
@@ -26,7 +27,7 @@ const TablaTurista = ({data}) => {
 
                     ) : (
                         <tr>
-                            <td colSpan="6">Sin Datos</td>
+                            <td colSpan="6"><img alt = 'cargando' src = 'https://media.tenor.com/mJj_aSgWvYQAAAAC/cargando-xd.gif'/></td>
                         </tr>
                     )
                 }   

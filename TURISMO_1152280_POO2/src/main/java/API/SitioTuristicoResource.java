@@ -25,7 +25,6 @@ public class SitioTuristicoResource {
         sitios = sitioDao.consultar();
         return Response
                 .status(200)
-                .header("Access-Control-Allow-Origin", "*")
                 .entity(sitios)
                 .build();
     }
@@ -37,7 +36,6 @@ public class SitioTuristicoResource {
         SitioTuristico sitio = new SitioTuristico(id);
         return Response
                 .status(200)
-                .header("Access-Control-Allow-Origin", "*")
                 .entity(sitioDao.consultarId(sitio))
                 .build();
     }
@@ -67,7 +65,6 @@ public class SitioTuristicoResource {
         if (i == 0) {
             return Response
                     .status(Response.Status.BAD_REQUEST)
-                    .header("Access-Control-Allow-Origin", "*")
                     .entity("Turista not found")
                     .build();
         } else {
