@@ -11,7 +11,7 @@ public class RestApplication extends Application{
 
  @Override
     public Set<Class<?>> getClasses() {
-        Set<Class<?>> classes = new HashSet<>();
+       Set<Class<?>> classes = new HashSet<>();
         classes.add(CorsFilter.class);
         classes.add(TuristaResource.class);
         classes.add(SitioTuristicoResource.class);

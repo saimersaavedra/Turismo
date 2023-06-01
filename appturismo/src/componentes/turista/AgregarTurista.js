@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 const AgregarTurista = ({ createTurista}) => {
-  const [newTurista, setNewTurista] = useState({ id: '', name: '', apellido: '', telefono: '', gmail: '', direction: '' });
+  const [newTurista, setNewTurista] = useState({apellido: '', direction: '', gmail: '', id: '', name: '', telefono: ''});
 
   const handleInputChange = (e) => {
     setNewTurista({ ...newTurista, [e.target.name]: e.target.value });
@@ -11,7 +11,7 @@ const AgregarTurista = ({ createTurista}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     createTurista(newTurista);
-    setNewTurista({ id: '', name: '', apellido: '', telefono: '', gmail: '', direction: ''});
+    setNewTurista({ apellido: '', direction: '', gmail: '', id: '', name: '', telefono: ''});
   };
 
   return (
@@ -26,7 +26,7 @@ const AgregarTurista = ({ createTurista}) => {
       <input
         type="text"
         name="name"
-        value={newTurista.nombre}
+        value={newTurista.name}
         onChange={handleInputChange}
         placeholder="Nombre"
       />
@@ -47,14 +47,14 @@ const AgregarTurista = ({ createTurista}) => {
       <input
         type="text"
         name="gmail"
-        value={newTurista.correo}
+        value={newTurista.gmail}
         onChange={handleInputChange}
         placeholder="Gmail"
       />
       <input
         type="text"
         name="direction"
-        value={newTurista.direccion}
+        value={newTurista.direction}
         onChange={handleInputChange}
         placeholder="Direccion"
       />

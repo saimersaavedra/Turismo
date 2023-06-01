@@ -16,6 +16,11 @@ import java.util.List;
 public class TuristaTest {
     public static void main(String[] args) {
         TuristaDao turistaDao = new TuristaDao();
+        List<Turista> turistas = new ArrayList();
+        turistas = turistaDao.consultar();
+        for (Turista turista : turistas) {
+            System.out.println(turista.getName());
+        }
         /*
        
         
@@ -24,19 +29,14 @@ public class TuristaTest {
         Turista dos = new Turista("2","Steven","Baron","31434132","steven@ufps.com","Av 1 #4");
 
         System.out.println("resultado: "+turistaDao.Insertar(uno)/*+turistaDao.Insertar(dos));
-        List<Turista> turistas = new ArrayList();
-        CONSULTAR
-        turistas = turistaDao.consultar();
-        for (Turista turista : turistas) {
-            System.out.println(turista.getName());
-        }
+        
         
         //BORRAR
        System.out.println("Borrado: "+turistaDao.borrar(dos));
-       */
         Turista g = new Turista("3","Keyly", "Ovallos", "31421355284","keyly@ufps.com","Av 2 #2");
         turistaDao.Insertar(g);
-     
+            */
+
         
     }
 }

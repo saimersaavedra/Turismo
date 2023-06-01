@@ -7,9 +7,10 @@ import java.sql.Statement;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 public class BaseDatos {
-    public static final String JDBC_URL = "jdbc:mysql://localhost:3306/1152280?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-    public static final String DB_USER = "root";
-    public static final String DB_CLAVE = "123456789";
+    
+    public static final String JDBC_URL = "jdbc:mysql://54.147.25.136:3306/1152280?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    public static final String DB_USER = "test";
+    public static final String DB_CLAVE = "test1_*";
     
     public static DataSource getDataSource(){
         
