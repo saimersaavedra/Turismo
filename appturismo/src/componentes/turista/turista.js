@@ -5,20 +5,10 @@ import AgregarTurista from './AgregarTurista';
 import CardTurista from './CardTurista';
 
 const Turista = () => {
+
     const [list, setList] = useState([]);
     useEffect(() => {
-       /* const fetchData = async () => {
-            try{
-                const response = await axios ({
-                    url: "http://localhost:8080/Turismo/api/apiturista/turista",
-                });
-                setList(response.data);
-            } catch(error){
-                console.log(error);
-            }
-        };*/
         fetchData();
-
     }, [setList] );
 
     const fetchData = async () => {
@@ -39,7 +29,6 @@ const Turista = () => {
             headers: {
               'Content-Type': 'application/json',
             },
-                
         });
           fetchData();
         } catch (error) {
@@ -47,14 +36,27 @@ const Turista = () => {
         }
 
       };
-      const eliminarTurista = () => {
-        
-      }
+      const deleteTurista = async (id) => {
+        let isDelete = window.confirm(
+            `¿Estás seguro de eliminar el registro con el id '${id}'?`
+          );
+          if (isDelete){
+            try {
+                await axios.delete(
+                  `http://localhost:8080/TURISMO_1152280_POO2/api/apiturista/turista/${id}`
+                );
+                console.log("si");
+              } catch (error) {
+                console.log(error);
+              }
+            };
+            fetchData();
+      };
     return (
         <div>
             <AgregarTurista createTurista={createTurista} />
-            <TablaTurista data = {list} /> 
-            <CardTurista data = {list} />             
+            <TablaTurista data={list} deleteTurista={deleteTurista} /> 
+            <CardTurista data = {list} deleteTurista={deleteTurista} />             
         </div>
     );
 };

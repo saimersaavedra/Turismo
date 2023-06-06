@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-const CardTurista = ({data}) => {
+const CardTurista = ({data, deleteTurista}) => {
     return (
         <div>
             <div class="text-bg-primary p-3"><h3>LISTA DE TURISTAS</h3></div>
@@ -11,14 +11,13 @@ const CardTurista = ({data}) => {
                         data.map((tie) => (
                             <Card
                             key ={tie.id}
-                            tie = {tie}             
+                            tie = {tie}   
+                            deleteTurista = {deleteTurista}         
                                                      />
-
-
                         ))
 
                     ) : (
-                        <h3>No hay Datos </h3>
+                        <h3><img alt = 'cargando' src = 'https://media.tenor.com/mJj_aSgWvYQAAAAC/cargando-xd.gif'/></h3>
                     )
                 }   
              
